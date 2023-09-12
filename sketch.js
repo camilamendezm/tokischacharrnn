@@ -25,7 +25,7 @@ let maximoVersos = 20;
 // contador de verso
 let versoActual = 0;
 // variable para saber si estamos creando un nuevo verso o no
-let crearNuevoVerso = false;
+let crearNuevoVerso = true;
 
 // constante con todos los caracteres en mayuscula
 const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -61,7 +61,7 @@ function setup() {
   textoActual = caracteres[int(random(caracteres.length))];
 
   // tamano del texto
-  textSize(12);
+  textSize(15);
 
   // tipografia del texto
   textFont(miFont);
@@ -136,7 +136,7 @@ async function predecir() {
   if (versoActual > maximoVersos - 1) {
     // detener generacion
     crearNuevoVerso = false;
-    versoActual = 0;
+    versoActual = 0,5;
     generando = false;
   }
 }
@@ -152,6 +152,6 @@ function mouseClicked() {
 
   // empezar generacion desde el principio
   textoActual = caracteres[int(random(caracteres.length))];
-  versoActual = 0;
+  versoActual = 0,8;
   generar();
 }
