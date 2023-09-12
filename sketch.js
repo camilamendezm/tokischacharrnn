@@ -67,7 +67,7 @@ function setup() {
   textFont(miFont);
 
   // texto alineado al centro
-  textAlign(RIGHT);
+  textAlign(LEFT);
 
   // color de relleno negro
   fill(0);
